@@ -2,8 +2,10 @@ const express = require("express")
 const app = express()
 const user = require('./rout/user')
 
+const PORT = 8000
+
 app.use(user)
 
-app.listen(8000,(req,res)=>{
-    console.log("app is running")
+app.listen(PORT,(req,res)=>{
+    console.log(`the server is running on http://127.0.0.1:${PORT}`)
 })
